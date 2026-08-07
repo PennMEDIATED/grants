@@ -468,24 +468,30 @@ img { max-width: 100%; height: auto; display: block; }
 
 .school-block__link:hover { border-color: var(--c-red); }
 
+/* max-height + max-width with height/width auto — the browser shrinks
+   proportionally to satisfy whichever bound is tighter, so a wide
+   lockup (e.g. Penn Carey Law) never gets squashed the way a fixed
+   height + max-width alone distorts it as the grid columns narrow at
+   responsive breakpoints. */
 .school-block__logo {
-  height: 44px;
-  width: auto;
+  max-height: 44px;
   max-width: 100%;
+  width: auto;
+  height: auto;
 }
 
 /* Engineering's lockup is a taller, narrower aspect ratio than the other
    schools' — at the shared height it reads noticeably smaller, so it
    gets a bump to match their visual weight. */
 .school-block__logo--seas {
-  height: 60px;
+  max-height: 60px;
 }
 
 /* Penn Carey Law's lockup is a single wide line — at the same height as
    the others it already reads as the widest mark in the grid, so it
    stays at the original size instead of scaling up with the rest. */
 .school-block__logo--law {
-  height: 36px;
+  max-height: 36px;
 }
 
 /* Grant specs — label/description rows */
