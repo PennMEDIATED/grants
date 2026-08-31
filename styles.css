@@ -148,6 +148,20 @@ img { max-width: 100%; height: auto; display: block; }
   color: var(--c-dark);
 }
 
+/* Inline body-copy links — same treatment sitewide (matches
+   .rfp__contact a below, and .event-card__caption a / .post-excerpt a /
+   .intro__body a in /events, /blog, /data): red, weight 500, no
+   underline, opacity 0.7 on hover. Previously missing here entirely,
+   so these links inherited the global `a { color: inherit }` reset
+   and were visually indistinguishable from surrounding text. */
+.intro__body a {
+  color: var(--c-red);
+  font-weight: 500;
+  transition: opacity 0.15s;
+}
+
+.intro__body a:hover { opacity: 0.7; }
+
 /* Shared section-subhead pattern — DM Sans SemiBold 24px, same specs as
    /home's .whats-new__label, reused here for in-page focus-area headings. */
 .intro__subhead {
@@ -622,7 +636,7 @@ img { max-width: 100%; height: auto; display: block; }
   transition: opacity 0.15s;
 }
 
-.rfp__contact a:hover { opacity: 0.8; }
+.rfp__contact a:hover { opacity: 0.7; }
 
 /* =============================================================================
    NEWSLETTER  — identical values to /about and /home's newsletter block
