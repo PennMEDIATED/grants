@@ -95,7 +95,7 @@ img { max-width: 100%; height: auto; display: block; }
 .intro {
   background: var(--c-bg);
   padding-top: var(--space-1000);
-  padding-bottom: var(--space-1000);
+  padding-bottom: var(--space-300);
 }
 
 .intro__inner {
@@ -181,6 +181,7 @@ img { max-width: 100%; height: auto; display: block; }
 .grant-list {
   background: var(--c-accent);
   padding-block: var(--space-1000);
+  padding-top: 0;
 }
 
 .grant-list__inner {
