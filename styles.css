@@ -181,7 +181,6 @@ img { max-width: 100%; height: auto; display: block; }
 .grant-list {
   background: var(--c-accent);
   padding-block: var(--space-1000);
-  padding-top: 0;
 }
 
 .grant-list__inner {
