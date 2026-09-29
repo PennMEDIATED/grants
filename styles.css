@@ -181,6 +181,7 @@ img { max-width: 100%; height: auto; display: block; }
 .grant-list {
   background: var(--c-accent);
   padding-block: var(--space-1000);
+  padding-top: calc(var(--space-1000) + var(--space-800));  /* 144px: purple reads clearly above the heading */
 }
 
 .grant-list__inner {
